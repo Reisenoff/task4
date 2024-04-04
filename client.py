@@ -1,5 +1,6 @@
 import socket
 
+
 def start_client(host, port):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((host, port))
@@ -16,6 +17,7 @@ def start_client(host, port):
 
     print("Разрыв соединения с сервером")
     client_socket.close()
+
 
 if __name__ == "__main__":
     host = input("Введите имя хоста (пустая строка для использования localhost): ") or 'localhost'
